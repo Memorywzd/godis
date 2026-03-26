@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	tcp.ListenAndEchoWithSignal(":8080", tcp.MakeEchoHandler())
+	tcp.ListenAndServeWithSignal(":8080", tcp.MakeEchoHandler())
 }

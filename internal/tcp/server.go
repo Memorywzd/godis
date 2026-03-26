@@ -9,8 +9,8 @@ import (
 	"syscall"
 )
 
-// 监听并Echo，收到closeChan的通知后关闭
-func ListenAndEchoWithSignal(addr string, handler HandlerInterface) {
+// 监听并交给handler处理，收到closeChan的通知后关闭
+func ListenAndServeWithSignal(addr string, handler HandlerInterface) {
 	closeChan := make(chan struct{}) // TODO: 与 make(chan bool, 1) 的区别
 	signalChan := make(chan os.Signal)
 	/*
