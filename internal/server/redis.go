@@ -27,7 +27,8 @@ type RespHandler struct {
 // MakeRespHandler creates a RespHandler instance
 func MakeRespHandler() *RespHandler {
 	var db idatabse.Database
-	db = database.MakeEchoDatabase()
+	// db = database.MakeEchoDatabase()
+	db = database.MakeDatabase()
 	return &RespHandler{
 		db: db,
 	}

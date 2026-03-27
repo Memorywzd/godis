@@ -50,5 +50,5 @@ func (c *Connection) GetDBIndex() int {
 
 // SelectDB selects a database
 func (c *Connection) SelectDB(dbNum int) {
-	c.selectedDB = dbNum
+	c.selectedDB = 1 // 仅实现一个db
 }
